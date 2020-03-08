@@ -1,1 +1,1 @@
-python manage.py runserver
+python main\manage.py runserver

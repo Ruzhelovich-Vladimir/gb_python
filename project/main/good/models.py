@@ -5,6 +5,20 @@ from django.db import models
 
 class good(models.Model):
 
+    UNITS = (
+        (1, 'шт.'),
+        (2, 'литры.'),
+        (2, 'кг.'),
+    )
+
+    TYPE = (
+        (1, 'Бытовая техника'),
+        (2, 'Мебель'),
+        (3, 'Книги'),
+        (4, 'Продукты'),
+        (5, 'Офисное оборудование'),
+    )
+
     title = models.CharField(
         verbose_name=u'Наименование товара',
         max_length=255
@@ -22,15 +36,13 @@ class good(models.Model):
         decimal_places=2,
     )
 
-    unit = models.CharField(
-        verbose_name=u'Ед. измерения',
-        max_length=10
-    )
+    unit = models.IntegerField(
+        verbose_name='Ед. измерения',
+        choices=UNITS)
 
-    type = models.CharField(
-        verbose_name=u'Вид товара',
-        max_length=255
-    )
+    type = models.IntegerField(
+        verbose_name='Вид товара',
+        choices=TYPE)
 
     weight = models.FloatField(
         verbose_name=u'Вес',
@@ -44,7 +56,7 @@ class good(models.Model):
 
     qty_per_pack = models.PositiveIntegerField(
         verbose_name=u'Количество в упаковке',
-        default=0
+        default=1
     )
 
     manufacturer = models.CharField(

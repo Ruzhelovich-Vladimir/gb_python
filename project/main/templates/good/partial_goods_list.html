@@ -1,0 +1,26 @@
+    <tr>
+        <th>Наименование</th>
+        <th>Дата поступления</th>
+        <th>Цена</th>
+        <th>Ед. измерения</th>
+        <th>Вид</th>
+        <th>Вес</th>
+        <th>Объём</th>
+        <th>Кол-во в уп.</th>
+        <th>Производитель</th>
+        <th>Поставщик</th>
+    </tr>
+    {% for good in goods %}
+    <tr>
+         <td>{{ good.title }}</td>
+         <td>{{ good.delivery_at }}</td>
+         <td>{{ good.price }}</td>
+         <td>{{ good.unit }}</td>
+         <td>{{ good.type }}</td>
+         <td>{{ good.weight }}</td>
+         <td>{{ good.volume }}</td>
+         <td>{{ good.qty_per_pack }}</td>
+         <td>{{ good.manufacturer }}</td>
+         <td>{{ good.distributor }}</td>
+    </tr>
+    {% endfor %}

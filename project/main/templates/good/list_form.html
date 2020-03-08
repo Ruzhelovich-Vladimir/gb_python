@@ -1,32 +1,30 @@
 {% extends 'layout.html' %}
 {% block content %}
-<a href="{% url 'good:add' %}" class="btn btn-success">Добавить</a>
+<div align="right">
+    <button type="button btn-success" class="btn btn-primary" data-toggle="modal" data-target="#modal">Добавить</button>
+</div>
 <table class="table">
-    <tr>
-        <th>Наименование</th>
-        <th>Дата поступления</th>
-        <th>Цена</th>
-        <th>Ед. измерения</th>
-        <th>Вид</th>
-        <th>Вес</th>
-        <th>Объём</th>
-        <th>Кол-во в уп.</th>
-        <th>Производитель</th>
-        <th>Поставщик</th>
-    </tr>
-    {% for good in goods %}
-    <tr>
-         <td>{{ good.title }}</td>
-         <td>{{ good.delivery_at }}</td>
-         <td>{{ good.price }}</td>
-         <td>{{ good.unit }}</td>
-         <td>{{ good.type }}</td>
-         <td>{{ good.weight }}</td>
-         <td>{{ good.volume }}</td>
-         <td>{{ good.qty_per_pack }}</td>
-         <td>{{ good.manufacturer }}</td>
-         <td>{{ good.distributor }}</td>
-    </tr>
-    {% endfor %}
+    {% include "good/partial_goods_list.html" %}
 </table>
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="label">Новый товар</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form action="{% url 'good:add' %}" method="post" enctype="multipart/form-data">
+              {% include "good/add_form.html" %}
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+        <button type="button" class="btn btn-primary" id="add-button">Добавить</button>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
