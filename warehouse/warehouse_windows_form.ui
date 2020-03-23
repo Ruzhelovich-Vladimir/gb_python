@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>972</width>
+    <height>624</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Склад</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <widget class="QLineEdit" name="form_db_path">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>10</y>
+     <width>461</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>461</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="db_path_select">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>10</y>
+     <width>27</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_quit">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>590</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="group_tbl_list">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>201</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Таблицы</string>
+   </property>
+   <widget class="QListWidget" name="tbl_list">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>181</width>
+      <height>501</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Файл базы данных:</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>70</y>
+     <width>711</width>
+     <height>501</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>50</y>
+     <width>731</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Элементы таблицы</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_buttom">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>10</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Добавить</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="del_buttom">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>10</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Удалить</string>
+   </property>
+  </widget>
+  <zorder>groupBox_2</zorder>
+  <zorder>form_db_path</zorder>
+  <zorder>db_path_select</zorder>
+  <zorder>btn_quit</zorder>
+  <zorder>group_tbl_list</zorder>
+  <zorder>label</zorder>
+  <zorder>tableView</zorder>
+  <zorder>add_buttom</zorder>
+  <zorder>del_buttom</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>form_db_path</tabstop>
+  <tabstop>db_path_select</tabstop>
+  <tabstop>tbl_list</tabstop>
+  <tabstop>tableView</tabstop>
+  <tabstop>add_buttom</tabstop>
+  <tabstop>del_buttom</tabstop>
+  <tabstop>btn_quit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
